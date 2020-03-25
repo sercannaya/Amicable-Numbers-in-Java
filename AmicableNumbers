@@ -1,0 +1,52 @@
+import java.util.Scanner;
+public class srcnny {
+
+	public static void main(String[] args) {
+		
+		int numA, numB, j, i;
+		int numBTot=0, numATot=0;
+		
+		Scanner scan = new Scanner(System.in);
+		
+		System.out.print("Enter the first number:");
+		numA = scan.nextInt();
+		
+		System.out.print("Enter the second number:");
+		numB = scan.nextInt();
+		
+		System.out.print("\n");
+		
+		System.out.print("Value entered: "+numA+" ==> ");
+		for ( i=1; i <= numA / 2; i++ )
+		{
+			if ( numA % i == 0 )
+			{
+				System.out.print(i+ " ");
+				numATot += i;
+			}
+		}
+		
+		System.out.println("\n");
+		
+		System.out.print("Value entered: "+numB+" ==> ");
+		for ( j=1; j <= numB / 2; j++ )
+		{
+			if (numB % j == 0)
+			{
+				System.out.print(j+ " ");
+				numBTot += j;
+			}
+		}
+		
+		System.out.print("\n");
+		
+		if( numATot == numB && numBTot == numA)
+		{
+			System.out.print("\nAmicable numbers");
+		}
+		else
+		{
+			System.out.print("\nNot amicable numbers");
+		}
+	}
+}
